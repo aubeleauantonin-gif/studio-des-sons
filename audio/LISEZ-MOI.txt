@@ -1,0 +1,10 @@
+Dépose tes fichiers MP3 dans ce dossier, avec EXACTEMENT ces noms pour le premier essai :
+
+casserole.mp3
+porte.mp3
+chien.mp3
+pluie.mp3
+klaxon.mp3
+
+Il n'y a aucun MP3 fourni dans ce prototype : utilise tes propres bruitages.
+Tu peux ensuite ajouter autant de sons que nécessaire en modifiant sons.json.

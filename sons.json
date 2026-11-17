@@ -1,0 +1,7 @@
+[
+  {"id":"S001", "nom":"Casserole",         "icone":"🥘", "couleur":"amber",    "fichier":"audio/casserole.mp3"},
+  {"id":"S002", "nom":"Porte qui grince", "icone":"🚪", "couleur":"lavender", "fichier":"audio/porte.mp3"},
+  {"id":"S003", "nom":"Chien qui aboie",  "icone":"🐶", "couleur":"coral",    "fichier":"audio/chien.mp3"},
+  {"id":"S004", "nom":"Pluie",            "icone":"🌧️", "couleur":"sky",      "fichier":"audio/pluie.mp3"},
+  {"id":"S005", "nom":"Klaxon",           "icone":"🚗", "couleur":"mint",     "fichier":"audio/klaxon.mp3"}
+]
