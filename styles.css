@@ -42,3 +42,61 @@
 
 /* V3 : interface de jeu sans texte visible */
 .app-shell{max-width:560px}.topbar{padding-bottom:22px}.top-link{font-size:27px}.primary{font-size:32px}.manual-controls{margin-top:14px}.manual-controls select{font-size:28px}.status{font-size:24px;text-align:center;margin-bottom:0}.track-item{min-height:76px}.track-item.selected{outline:3px solid #14293a;outline-offset:0}.sound-choice{border:0;background:transparent;flex:1;display:flex;justify-content:center;padding:4px}.sound-choice .sound-icon{width:58px;height:52px;flex-basis:58px;font-size:34px}.selection-check{width:28px;font-size:23px;color:#14293a}.edit-controls{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}.edit-controls button,.play-controls button{font-size:29px;min-height:58px}.delete{color:#a9453e;background:#fff1ed}.playback-info{text-align:center;font-size:20px}.track-item.is-playing{box-shadow:inset 7px 0 #369873}.sound-choice:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #338269;outline-offset:3px}[hidden]{display:none!important}
+
+/* FOLEY — Édition Studio : habillage seul, compatible avec la V3. */
+body:has(#trackList){color:#f3ede1;background:#131516;background-image:radial-gradient(ellipse at 10% 0%,#51402a55,transparent 48%),radial-gradient(ellipse at 100% 80%,#21463d33,transparent 55%);font-family:'DM Sans',system-ui,sans-serif;min-height:100svh}
+body:has(#trackList) .app-shell{max-width:580px;padding:26px 22px 40px}
+body:has(#trackList) .topbar{padding:0 2px 24px;position:relative}
+body:has(#trackList) .brand-mark{width:55px;height:48px;border:1px solid #bfa47766;border-radius:14px;background:linear-gradient(145deg,#e3c48c,#b89157);color:#24201a;box-shadow:0 5px 18px #0004;font-size:31px}
+body:has(#trackList) .topbar:after{content:'';position:absolute;left:80px;right:78px;height:22px;opacity:.5;background:repeating-linear-gradient(90deg,transparent 0 7px,#bba37a 7px 9px,transparent 9px 14px);mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent);border-radius:50%}
+body:has(#trackList) .top-link{color:#c7b28d;border:1px solid #ffffff1c;padding:8px 12px;border-radius:12px;background:#ffffff05;font-size:23px}
+body:has(#trackList) .surface{padding:22px;border:1px solid #ffffff12;border-radius:25px;background:linear-gradient(145deg,#292b2c,#1e2021);box-shadow:0 15px 35px #0003,inset 0 1px #ffffff06;margin-bottom:18px}
+body:has(#trackList) .section-heading{margin-bottom:16px;color:#ccb78f;font-size:23px}
+body:has(#trackList) .counter{font-variant-numeric:tabular-nums;letter-spacing:.12em;font-size:13px;padding:9px 15px;color:#e8d6b3;background:#b6976120;border:1px solid #c8a57028;font-weight:500}
+body:has(#trackList) .primary{border:1px solid #e6c99877;background:linear-gradient(120deg,#e8cd9d,#c4a16c);color:#292219;border-radius:16px;font-size:34px;min-height:76px;box-shadow:0 4px 0 #8c7048,0 10px 25px #0003}
+body:has(#trackList) .manual-controls{margin-top:20px;gap:10px}
+body:has(#trackList) .manual-controls select{border:1px solid #ffffff17;background:#161819;color:#f2dfb8;border-radius:14px;padding:9px 16px;min-height:54px;font-size:26px;outline-offset:3px}
+body:has(#trackList) .secondary{border:1px solid #ffffff17;background:linear-gradient(#353738,#2b2d2e);color:#dfd8c9;border-radius:14px;box-shadow:0 3px 0 #1114;min-width:54px}
+body:has(#trackList) .status{margin:12px 0 -7px;min-height:24px;line-height:1;color:#d4bb8a;font-size:20px}
+body:has(#trackList) .status.success{color:#9bd2b4}
+body:has(#trackList) .status.error{color:#ffada0}
+body:has(#trackList) .track-list{gap:10px;margin:0 0 22px;position:relative}
+body:has(#trackList) .track-item{border:1px solid #ffffff0d;background:#17191a;border-radius:17px;min-height:78px;padding:9px 14px;gap:15px;transition:border-color .2s,background .2s,box-shadow .2s;position:relative}
+body:has(#trackList) .track-item.empty{background:#1a1c1d66;border:1px dashed #ffffff13}
+body:has(#trackList) .track-index{background:none;color:#8d8b85;font-size:13px;font-weight:500;font-variant-numeric:tabular-nums}
+body:has(#trackList) .track-item.empty .track-index{background:none;color:#595c5b}
+body:has(#trackList) .track-item.selected{outline:none;border:1px solid #d9b77b;background:linear-gradient(100deg,#b6935320,#242522);box-shadow:0 0 0 3px #d9b77b0c}
+body:has(#trackList) .track-item.selected .track-index{color:#e8c88f}
+body:has(#trackList) .sound-choice{padding:0;min-height:58px;justify-content:flex-start;align-items:center;gap:15px;border-radius:10px}
+body:has(#trackList) .sound-choice:after{content:'';height:18px;width:80px;opacity:.25;background:repeating-linear-gradient(90deg,#c4b69d 0 2px,transparent 2px 7px);mask-image:linear-gradient(90deg,transparent,#000,transparent);border-radius:50%}
+body:has(#trackList) .sound-choice .sound-icon{width:60px;height:58px;flex-basis:60px;border:1px solid #ffffff20;border-radius:13px;font-size:33px;box-shadow:inset 0 1px #ffffff1a}
+body:has(#trackList) .tone-amber{background:#665035}
+body:has(#trackList) .tone-lavender{background:#51465f}
+body:has(#trackList) .tone-coral{background:#684e42}
+body:has(#trackList) .tone-sky{background:#3c5364}
+body:has(#trackList) .tone-mint{background:#3c5b4e}
+body:has(#trackList) .empty .sound-icon{background:transparent;border:0;box-shadow:none;color:#535752;font-size:25px}
+body:has(#trackList) .empty .sound-choice:after{opacity:.07}
+body:has(#trackList) .selection-check{color:#e8c88f;width:25px;font-size:20px}
+body:has(#trackList) .track-item.is-playing{border-color:#a2dec0;background:linear-gradient(100deg,#315347,#23312c);box-shadow:inset 4px 0 #a2dec0,0 0 25px #7cc4a014;padding:9px 14px}
+body:has(#trackList) .track-item.is-playing .track-index{color:#b9eacd;background:none}
+body:has(#trackList) .track-item.is-playing .sound-choice:after{opacity:.8;background:repeating-linear-gradient(90deg,#b9eacd 0 2px,transparent 2px 7px);animation:meter 850ms ease-in-out infinite alternate}
+body:has(#trackList) .edit-controls{gap:10px;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #ffffff0b}
+body:has(#trackList) .edit-controls button{min-height:56px;font-size:25px;font-weight:400}
+body:has(#trackList) .delete{color:#e7afa3;background:linear-gradient(#40322f,#342a28)}
+body:has(#trackList) .play-controls{gap:12px}
+body:has(#trackList) .play-button{border:1px solid #c3e5d744;background:linear-gradient(135deg,#acd9c3,#78b59b);color:#173c2d;border-radius:16px;min-height:69px;box-shadow:0 4px 0 #426c58,0 8px 20px #0002;font-size:30px}
+body:has(#trackList) #stopBtn{min-width:72px;font-size:22px}
+body:has(#trackList) button{transition:filter .15s,transform .15s,opacity .15s;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+body:has(#trackList) button:disabled{opacity:.28;box-shadow:none}
+body:has(#trackList) button:not(:disabled):active{transform:translateY(2px)}
+body:has(#trackList) .progress{margin-top:23px;background:#0f1212;height:4px}
+body:has(#trackList) .progress-fill{background:#b3ddc7;box-shadow:0 0 10px #b3ddc766}
+body:has(#trackList) .playback-info{color:#8eaaa0;font-size:16px;letter-spacing:.16em;margin:12px 0 0;min-height:20px}
+body:has(#trackList) .scanner-box{background:#161819;border-color:#ffffff15;border-radius:18px}
+body:has(#trackList) #qr-reader{background:#161819}
+body:has(#trackList) :is(button,a,select):focus-visible{outline:3px solid #f0d09a;outline-offset:4px}
+@media(hover:hover){body:has(#trackList) button:not(:disabled):hover{filter:brightness(1.1)}}
+@keyframes meter{from{transform:scaleY(.45)}to{transform:scaleY(1.2)}}
+@media(max-width:440px){body:has(#trackList) .app-shell{padding:19px 14px 28px}body:has(#trackList) .surface{padding:17px;border-radius:22px}body:has(#trackList) .track-item{min-height:70px;padding:7px 11px}body:has(#trackList) .track-item.is-playing{padding:7px 11px}body:has(#trackList) .sound-choice .sound-icon{width:54px;height:52px;flex-basis:54px;font-size:30px}body:has(#trackList) .sound-choice{min-height:54px}body:has(#trackList) .track-list{gap:8px}body:has(#trackList) .sound-choice:after{width:58px}}
+@media(prefers-reduced-motion:reduce){body:has(#trackList) *,body:has(#trackList) *:after{animation:none!important;transition:none!important}}
