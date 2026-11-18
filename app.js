@@ -44,7 +44,6 @@ function render() {
   $('counter').textContent = state.queue.length + ' / 5';
   $('playBtn').disabled = state.queue.length !== 5 || busy || !!state.session;
   $('scanBtn').disabled = state.queue.length >= 5 || !state.catalog.length || busy;
-  $('addManualBtn').disabled = $('scanBtn').disabled;
   $('clearBtn').disabled = !state.queue.length && !state.session;
   $('deleteBtn').disabled = state.selected < 0 || busy;
   $('upBtn').disabled = state.selected <= 0 || busy;
@@ -59,6 +58,14 @@ function render() {
     button.setAttribute('aria-label',sound ? sound.nom+', position '+(i+1) : 'Emplacement libre');
     button.setAttribute('aria-pressed',String(i===state.selected));
     const icon=document.createElement('span');icon.className='sound-icon tone-'+soundTone(sound);icon.textContent=sound?soundIcon(sound):'♪';
+    if (sound) {
+      const imagePath = sound.image || sound.fichier.replace(/^audio\//, 'images/').replace(/\.mp3$/i, '.png');
+      const img = document.createElement('img');
+      img.className = 'sound-illustration'; img.alt = sound.nom; img.draggable = false;
+      img.addEventListener('load', () => icon.replaceChildren(img), {once:true});
+      img.addEventListener('error', () => { icon.textContent = soundIcon(sound); }, {once:true});
+      img.src = imagePath;
+    }
     button.append(icon);button.addEventListener('click',()=>{state.selected=i;render();});
     const check=document.createElement('span');check.className='selection-check';check.textContent=i===state.selected?'✓':'';check.setAttribute('aria-hidden','true');
     li.append(index,button,check);list.append(li);
@@ -97,7 +104,7 @@ async function closeCamera() {
 async function openCamera() {
   if (state.scanner) return;
   if (typeof Html5Qrcode === 'undefined') {
-    msg('Scanner indisponible. Vérifie la connexion internet ou utilise le menu de test.', 'error'); return;
+    msg('Scanner indisponible. Vérifie la connexion internet.', 'error'); return;
   }
   $('scannerBox').hidden = false;
   msg('Ouverture de la caméra…');
@@ -220,19 +227,13 @@ async function init() {
       state.byId.set(sound.id,sound);
     }
     state.catalog = sounds;
-    const select = $('manualSelect'); select.replaceChildren();
-    for (const sound of sounds) {
-      const option = document.createElement('option'); option.value = sound.id;
-      option.textContent = soundIcon(sound); select.append(option);
-    }
-    render(); msg('Prêt : ' + sounds.length + ' sons disponibles. Scanne une carte ou utilise le mode test.');
+    render(); msg('Prêt : ' + sounds.length + ' sons disponibles. Scanne une carte.');
   } catch (error) {
     msg('Erreur : ' + error.message + '. Utilise l’adresse web du site, pas un fichier local.', 'error');
   }
 }
 $('scanBtn').addEventListener('click',openCamera);
 $('closeScanner').addEventListener('click',closeCamera);
-$('addManualBtn').addEventListener('click',()=>$('manualSelect').value && addSound($('manualSelect').value));
 $('playBtn').addEventListener('click',playSequence);
 $('stopBtn').addEventListener('click',async()=>{
   await stopPlayback(); state.loading=false; render(); info('■','Lecture arrêtée.');

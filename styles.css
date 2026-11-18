@@ -100,3 +100,7 @@ body:has(#trackList) :is(button,a,select):focus-visible{outline:3px solid #f0d09
 @keyframes meter{from{transform:scaleY(.45)}to{transform:scaleY(1.2)}}
 @media(max-width:440px){body:has(#trackList) .app-shell{padding:19px 14px 28px}body:has(#trackList) .surface{padding:17px;border-radius:22px}body:has(#trackList) .track-item{min-height:70px;padding:7px 11px}body:has(#trackList) .track-item.is-playing{padding:7px 11px}body:has(#trackList) .sound-choice .sound-icon{width:54px;height:52px;flex-basis:54px;font-size:30px}body:has(#trackList) .sound-choice{min-height:54px}body:has(#trackList) .track-list{gap:8px}body:has(#trackList) .sound-choice:after{width:58px}}
 @media(prefers-reduced-motion:reduce){body:has(#trackList) *,body:has(#trackList) *:after{animation:none!important;transition:none!important}}
+
+/* Illustrations et scan QR */
+.sound-illustration{display:block;width:100%;height:100%;object-fit:contain;padding:5px;box-sizing:border-box;}
+#scanBtn{display:flex;align-items:center;justify-content:center;}
