@@ -1,7 +1,18 @@
 [
-  {"id":"S001", "nom":"Casserole",         "icone":"🥘", "couleur":"amber",    "fichier":"audio/casserole.mp3"},
-  {"id":"S002", "nom":"Porte qui grince", "icone":"🚪", "couleur":"lavender", "fichier":"audio/porte.mp3"},
-  {"id":"S003", "nom":"Chien qui aboie",  "icone":"🐶", "couleur":"coral",    "fichier":"audio/chien.mp3"},
-  {"id":"S004", "nom":"Pluie",            "icone":"🌧️", "couleur":"sky",      "fichier":"audio/pluie.mp3"},
-  {"id":"S005", "nom":"Klaxon",           "icone":"🚗", "couleur":"mint",     "fichier":"audio/klaxon.mp3"}
+  {"id":"S001","nom":"Casserole","icone":"🥘","couleur":"amber","fichier":"audio/casserole.mp3","image":"images/casserole.png"},
+  {"id":"S006","nom":"Couverts","icone":"🍴","couleur":"amber","fichier":"audio/couverts.mp3","image":"images/couverts.png"},
+  {"id":"S007","nom":"Couteau","icone":"🔪","couleur":"amber","fichier":"audio/couteau.mp3","image":"images/couteau.png"},
+  {"id":"S008","nom":"Bouilloire","icone":"🫖","couleur":"amber","fichier":"audio/bouilloire.mp3","image":"images/bouilloire.png"},
+  {"id":"S009","nom":"Mixeur","icone":"🔊","couleur":"amber","fichier":"audio/mixeur.mp3","image":"images/mixeur.png"},
+  {"id":"S010","nom":"Micro-ondes","icone":"🔊","couleur":"amber","fichier":"audio/micro_ondes.mp3","image":"images/micro_ondes.png"},
+  {"id":"S011","nom":"Grille-pain","icone":"🍞","couleur":"amber","fichier":"audio/grille_pain.mp3","image":"images/grille_pain.png"},
+  {"id":"S012","nom":"Verre et cuillère","icone":"🥛","couleur":"amber","fichier":"audio/verre_cuillere.mp3","image":"images/verre_cuillere.png"},
+  {"id":"S013","nom":"Clavier","icone":"⌨️","couleur":"sky","fichier":"audio/clavier.mp3","image":"images/clavier.png"},
+  {"id":"S014","nom":"Souris","icone":"🖱️","couleur":"sky","fichier":"audio/souris.mp3","image":"images/souris.png"},
+  {"id":"S015","nom":"Imprimante","icone":"🖨️","couleur":"sky","fichier":"audio/imprimante.mp3","image":"images/imprimante.png"},
+  {"id":"S016","nom":"Agrafeuse","icone":"🔊","couleur":"sky","fichier":"audio/agrafeuse.mp3","image":"images/agrafeuse.png"},
+  {"id":"S017","nom":"Papier","icone":"📄","couleur":"sky","fichier":"audio/papier.mp3","image":"images/papier.png"},
+  {"id":"S018","nom":"Ciseaux","icone":"✂️","couleur":"sky","fichier":"audio/ciseaux.mp3","image":"images/ciseaux.png"},
+  {"id":"S019","nom":"Stylo","icone":"🖊️","couleur":"sky","fichier":"audio/stylo.mp3","image":"images/stylo.png"},
+  {"id":"S020","nom":"Ruban adhésif","icone":"🔊","couleur":"sky","fichier":"audio/ruban_adhesif.mp3","image":"images/ruban_adhesif.png"}
 ]
